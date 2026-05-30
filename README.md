@@ -1,26 +1,44 @@
-# Yasnad — Simulateur de montre connectée
+# Simulateur de montre connectée
 
-Un simulateur de montre connectée personnalisable en Java avec interface graphique temps réel.
+Yasnad est une application Java qui simule une montre connectée avec une interface graphique interactive. On peut personnaliser l'affichage en temps réel : changer le style du cadran, activer des widgets, modifier les couleurs, et même simuler une heure personnalisée. La configuration peut être sauvegardée et rechargée à tout moment.
 
-![Java](https://img.shields.io/badge/Java-17+-orange?logo=java) ![License](https://img.shields.io/badge/license-MIT-blue)
+![Java](https://img.shields.io/badge/Java-17+-orange?logo=java) ![Swing](https://img.shields.io/badge/UI-Swing-blueviolet) ![License](https://img.shields.io/badge/license-MIT-blue)
 
 ---
 
 ## Aperçu
 
-| Analogique | Numérique | Tous les widgets |
-|------------|-----------|------------------|
-| ![analog](images/analog.png) | ![digital](images/digital.png) | ![full](images/full.png) |
+![Affichage analogique](images/analog.png)
+
+![Affichage numérique](images/digital.png)
+
+![Tous les widgets actifs](images/full.png)
 
 ---
 
 ## Fonctionnalités
 
-- **Affichage analogique & numérique** — aiguilles avec index ou texte HH:MM
-- **Widgets modulaires** — secondes (trotteuse / mini-cadran / numérique), date, rythme cardiaque, batterie
-- **Personnalisation complète** — forme du boîtier (rond, carré, arrondi), fond (uniforme / dégradé / image), couleurs
-- **Simulation temporelle** — définir une heure de départ personnalisée
-- **Config persistante** — sauvegarde et rechargement de chaque configuration (`.montre`)
+### Affichage de l'heure
+- **Mode analogique** — aiguilles des heures et minutes, chiffres 1–12, graduations minutières
+- **Mode numérique** — heure affichée en grand au centre (HH:MM) en police Courier New
+
+### Panneau de personnalisation
+Un panneau latéral scrollable permet de tout configurer en temps réel sans relancer l'application :
+- **Boîtier** — 3 formes disponibles (rond, carré, arrondi), couleur et épaisseur du bord personnalisables
+- **Fond du cadran** — uniforme, dégradé deux couleurs, ou image personnalisée en arrière-plan
+- **Affichage heure** — basculer entre analogique et numérique, afficher ou masquer les chiffres
+- **Éléments optionnels** — activer/désactiver indépendamment chaque widget
+- **Simulation** — définir une heure de départ (heures, minutes, secondes) qui avance en temps réel
+
+### Widgets optionnels
+- **Secondes** — trotteuse sur le cadran, mini-cadran secondaire, ou compteur numérique
+- **Date** — 4 formats disponibles (dd/MM, dd/MM/yy, EEE dd, EEE dd MMM) en français
+- **Batterie** — lecture du niveau réel sur Linux, indicateur vert/rouge selon le niveau
+- **Rythme cardiaque** — simulation BPM avec icône cœur
+
+### Sauvegarde
+- Sauvegarde et rechargement de toute la configuration dans un fichier `.montre`
+- Accessible via le menu **Fichier** avec raccourcis clavier (Ctrl+S, Ctrl+O)
 
 ---
 
@@ -40,8 +58,6 @@ Un simulateur de montre connectée personnalisable en Java avec interface graphi
     java -cp bin montre.Main
 
 ---
-
-## Structure du projet
 
 ## Structure du projet
 
@@ -73,11 +89,11 @@ Un simulateur de montre connectée personnalisable en Java avec interface graphi
 ## Technologies
 
 - **Java 17** — langage principal
-- **Swing** — interface graphique
-- **Sérialisation Java** — persistance de la configuration
+- **Swing** — interface graphique (JFrame, JPanel, JComboBox, JColorChooser…)
+- **Sérialisation Java** — sauvegarde de la configuration via ObjectOutputStream
 
 ---
 
-## Auteures
+## Auteure
 
-**Nada Cherine Chetloul** L2 Informatique, Université de Picardie Jules Verne
+**Nada Cherine Chetloul** — L2 Informatique, Université de Picardie Jules Verne

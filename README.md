@@ -80,4 +80,4 @@ Un simulateur de montre connectée personnalisable en Java avec interface graphi
 
 ## Auteures
 
-**Nada Cherine Chetloul** & **Yasmine Hadji** — L2 Informatique, Université de Picardie Jules Verne
+**Nada Cherine Chetloul** L2 Informatique, Université de Picardie Jules Verne

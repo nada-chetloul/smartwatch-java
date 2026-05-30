@@ -43,11 +43,30 @@ Un simulateur de montre connectée personnalisable en Java avec interface graphi
 
 ## Structure du projet
 
-    src/montre/
-    ├── Main.java
-    ├── modele/          # Logique métier — Montre, ElementMontre, Boitier, FondCadran…
-    ├── vue/             # Interface Swing — FenetreMontre, PanneauMontre, PanneauConfig
-    └── serialisation/   # Sauvegarde/chargement — GestionnaireMontre
+## Structure du projet
+
+    src/
+    └── montre/
+        ├── modele/
+        │   ├── Montre.java
+        │   ├── ElementMontre.java
+        │   ├── Boitier.java
+        │   ├── FondCadran.java
+        │   ├── AffichageHeure.java
+        │   ├── AffichageAnalogique.java
+        │   ├── AffichageNumerique.java
+        │   ├── ElementDate.java
+        │   ├── ElementSecondes.java
+        │   ├── ElementBatterie.java
+        │   └── ElementRythmeCardiaque.java
+        │
+        ├── vue/
+        │   ├── FenetreMontre.java
+        │   ├── PanneauMontre.java
+        │   └── PanneauConfig.java
+        │
+        └── serialisation/
+            └── GestionnaireMontre.java
 
 ---
 
